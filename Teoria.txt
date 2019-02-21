@@ -1,0 +1,34 @@
+1.Establezca verdadero o falso en las siguientes sentencias:
+	-Rest es un protocolo que permite la interoperabilidad Verdadero
+	-Rest es una tecnología que está basada sobre el protocolo http Verdadero
+	-SOAP es un protocolo que tiene el objetivo transferir mensajes entre aplicaciones distribuidas  Verdadero
+	-Los componentes de rest son nouns,Adjectives,Representations Falso
+	-SOA es un protocolo de transferencia de mensajes entre aplicaciones distribuidas Falso
+2.Explique cada uno de los niveles de madurez de REST (Gloria REST)
+3.Cuales son los componentes del SOAP-ENVELOPE y para que sirven
+ el SOAP-ENVELOPE es un archivo xml en el cual se define un objeto mediante anotaciones para poder ser enviado, cada anotacion 
+ funciona como un atributo del objeto, al ser xml puede ser interpretado por distinstas plataformas ademas de tener un header que es
+ donde se encuentra la información general de lo que se esta enviando, a quien,etc. y un body donde se encuentra el objeto descrito
+como tal 
+4.Defina la diferencia de un estilo arquitectónico cliente servidor y un P2P
+ la diferencia radica en que en el cliente-servidor el cliente siempre es el que pide los recursos o servicios a un unico servidor y solo
+ puede ser cliente, por otra parte en la arquitectura P2P un mismo equipo puede ser cliente(solicitar servicios y recursos) y 
+ servidor(ofrecer servicios y recursos) al mismo tiempo, ademas de esto, el cliente no lo esta pidiendo todo solo a un unico servidor 
+ como en cliente-servidor sino que puede pedirse repartido a multiples servidores que tengan el recursos disponible y al final es el 
+ cliente el que se encarga de componerlo
+5.Escriba un ejemplo de un programa P2P y explique por que es P2P
+ se sabe que Utorrent es un programa P2P que funciona como gestor y administrador de descargas de archivos tales como juegos, peliculas, musica,etc.
+ es un programa P2P ya que yo como cliente puedo solicitar un recursos y el programa automaticamente me conecta a multiples servidores que tienen el
+ recursos que estoy solicitando y empieza a bajar un pedacito del recurso de cada servidor. de la misma forma al yo tener un pedazo de dicho recurso
+ el programa me convierte en servidor y si alguien mas solicita el recurso yo puedo ser servidor del pedacito que tengo para que el otro usuario lo descargue.
+6.Qué es WSDL y para que sirve?
+web service definition languaje es un lenguaje en xml que sirve para definir en un navegador como se van a enviar y recibir los servicios web y como deben ser 
+mostrados y desplegados en la pagina.
+7.Explique que significa que un objeto sea Thread-Safety
+un objeto es Thread safety cuando, siendo accedido desde multiples hilos conserva su estado, su integridad y no se presentan condiciones de carrera, es decir un hilo 
+no va a modificarlo de alguna manera en la cual corrompa los datos para el mismo o para otros hilos que acceden al objeto, esto se puede lograr con variables atomicas
+ o finales  que permitan mantener la integridad del objeto.
+8.Explique los tipos y las variables atómicas. 
+los tipos y las variables atomicas son objetos en los cuales se intenta llevar las operaciones a su expresion mas pequeña posible. de esta manera se puede ayudar a mantener
+la integridad de los datos y ayudar a que un objeto sea thread safety, por ejemplo los datos de un contador de tipo int pueden verse corrompidos si multiples hilos acceden a el 
+al mismo tiempo, para solucionar esto usamos un AtomicInteger que lleva las operaciones a su mas minima expresion y ayudan a que no se corrompan los datos.
