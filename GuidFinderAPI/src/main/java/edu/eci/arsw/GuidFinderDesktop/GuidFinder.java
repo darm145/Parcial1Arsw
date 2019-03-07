@@ -45,7 +45,12 @@ public class GuidFinder {
 	
 	public static int countGuids(UUID guidToFind) 
 	{
-		
+		try {
+			getGuids();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
 		AtomicInteger counter=new AtomicInteger();
 		int size=guids.length/4;
 		
